@@ -1,0 +1,5 @@
+Empiezan a teclear
+lo que quieran
+porque esto 
+lo va a leer
+Python
