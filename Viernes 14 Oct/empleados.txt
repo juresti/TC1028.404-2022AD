@@ -1,0 +1,5 @@
+Annette,48,345.98
+Garo,13,987.23
+Diego,95,463.28
+Daniela,32,765.12
+Eugenio,45,999.11

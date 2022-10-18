@@ -9,11 +9,34 @@ def menu():
     return int(input("Dime la opcion que deseas: "))
     
 def leerDatosArchivo():
+    with open("Empleados.txt","r") as miArchivo:
+        datosSucios = miArchivo.readlines()
+    print(datosSucios)
+    #Quita \n y genera listas
+    for pos in range(len(datosSucios)):
+        datosSucios[pos] = datosSucios[pos].rstrip()
+        datosSucios[pos] = datosSucios[pos].split(",")
+    print(datosSucios)
+    #Convierte datos
+    for lista in datosSucios:
+        lista[1] = int(lista[1])
+        lista[2] = float(lista[2])
+    print(datosSucios)
+        
     print("Datos leidos")
-    return [["Diego",23,14.5],["Kenia",25,98.4],["Samuel",20,74.52]]
+    return datosSucios #[["Diego",23,14.5],["Kenia",25,98.4],["Samuel",20,74.52]]
 
 def guardarDatosArchivo(listaEmp):
     print("Se guardara la siguiente inforamacion")
+    print(listaEmp)
+    
+    for lista in listaEmp:
+        lista[1] = str(lista[1])
+        lista[2] = str(lista[2])
+    print(listaEmp)
+    
+    for pos in range(len(listaEmp)):
+        listaEmp[pos] = ",".join(listaEmp[pos])
     print(listaEmp)
     print("Datos guardados")
 
